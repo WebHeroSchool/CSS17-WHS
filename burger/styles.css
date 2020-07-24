@@ -1,0 +1,69 @@
+body {
+  font-family: arial;
+  background-color: #008aff;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  background: #008aff;
+}
+
+.nav a {
+  color: #fff;
+  padding: 15px 10px;
+  text-decoration: none;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.nav a:hover {
+  background: #5c8db7;
+}
+
+/* условие для экранов с шириной от 0 до 1200px */
+@media (max-width: 700px) {
+  .nav {
+    display: none;
+  }
+}
+
+/* Mobile Navigation Button */
+
+.burger {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 30px;
+}
+
+.burger::before {
+  position: absolute;
+  left: 0;
+  top: -10px;
+  content: '';
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+}
+
+.burger::after {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  content: '';
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+}
+
+/* условие для экранов с шириной от 0 до 700px */
+@media (max-width: 700px) {
+  .burger {
+    display: block;
+  }
+}
